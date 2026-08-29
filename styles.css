@@ -10,6 +10,7 @@
   --white: #fff;
   --shell: 1180px;
   --shadow: 0 18px 50px rgba(9, 26, 81, .1);
+  --anchor-offset: 112px;
 }
 
 * { box-sizing: border-box; }
@@ -29,6 +30,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .shell { width: min(calc(100% - 48px), var(--shell)); margin-inline: auto; }
 .skip-link { position: fixed; left: 16px; top: -80px; z-index: 100; padding: 12px 18px; color: white; background: var(--navy); }
 .skip-link:focus { top: 16px; }
+#main, main section[id] { scroll-margin-top: var(--anchor-offset); }
 
 .site-header { position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,.96); border-bottom: 1px solid rgba(9,26,81,.1); backdrop-filter: blur(12px); }
 .header-inner { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
@@ -94,6 +96,10 @@ h3 { font-size: 1.5rem; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; color: var(--muted); font-size: .8rem; }
 .footer-inner img { width: 170px; }
 .footer-inner a { color: var(--navy); font-weight: 700; }
+.error-section { min-height: calc(100vh - 157px); display: grid; place-items: center; padding: 96px 0; background: linear-gradient(115deg, #f7f9f7 0%, #fff 67%); }
+.error-card { width: min(100%, 760px); padding: 64px; text-align: center; background: white; border-top: 5px solid var(--green); box-shadow: var(--shadow); }
+.error-code { margin: 0 0 14px; color: var(--green-dark); font-size: .78rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.error-card p:not(.error-code) { max-width: 520px; margin: 24px auto 32px; color: var(--muted); font-size: 1.08rem; }
 
 @media (max-width: 900px) {
   .menu-toggle { display: flex; align-items: center; gap: 10px; }
@@ -112,6 +118,7 @@ h3 { font-size: 1.5rem; }
 }
 
 @media (max-width: 600px) {
+  :root { --anchor-offset: 98px; }
   .shell { width: min(calc(100% - 32px), var(--shell)); }
   .header-inner { min-height: 74px; }
   .brand img { width: 190px; }
@@ -132,6 +139,8 @@ h3 { font-size: 1.5rem; }
   .button-light { width: 100%; }
   .footer-inner { align-items: flex-start; flex-direction: column; gap: 16px; }
   .footer-inner p { margin: 0; }
+  .error-section { min-height: calc(100vh - 143px); padding: 64px 0; }
+  .error-card { padding: 42px 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
