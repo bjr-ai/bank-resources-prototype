@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+
+# Internal / sensitive — never publish to this public repo
+bank-resources-recovery-credentials.xlsx
+CASE_STUDY_EVIDENCE_LOG.md
+DEPLOYMENT_VERIFICATION_*.md
+LAUNCH_STATUS_ASSESSMENT.md
+OWNER_APPROVAL_CHECKLIST.md
+RELEASE_CHECKLIST.md
+SAFE_*.md
+evidence/
