@@ -79,10 +79,19 @@ h3 { font-size: 1.5rem; }
 .service-card:hover { position: relative; z-index: 1; background: white; box-shadow: 0 12px 34px rgba(9,26,81,.08); transform: translateY(-2px); }
 .service-number { display: block; margin-bottom: 38px; color: var(--green-dark); font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
 .service-card p { margin: 16px 0 0; color: var(--muted); font-size: .94rem; }
+.stats-section { background: var(--soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; padding: 56px 0; }
+.stat { text-align: center; }
+.stat-number { display: block; font-family: Georgia, "Times New Roman", serif; font-size: 2.15rem; font-weight: 700; color: var(--navy); }
+.stat-label { display: block; margin-top: 8px; color: var(--muted); font-size: .85rem; line-height: 1.4; }
 .leadership-section { background: white; }
-.leadership-card { display: grid; grid-template-columns: 1.1fr .9fr; gap: 84px; padding: 68px; border-left: 5px solid var(--green); box-shadow: var(--shadow); }
-.leadership-card p:not(.eyebrow) { margin-top: 6px; color: var(--muted); font-size: 1.06rem; }
-.leadership-card .text-link { display: inline-block; margin-top: 14px; }
+.leadership-intro p:not(.eyebrow) { margin-top: 6px; color: var(--muted); font-size: 1.06rem; }
+.people-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 56px; }
+.person-card { padding: 32px; background: var(--soft); border: 1px solid var(--line); }
+.person-avatar { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; margin-bottom: 20px; border-radius: 50%; background: var(--navy); color: white; font-size: .85rem; font-weight: 800; letter-spacing: .04em; }
+.person-name { margin: 0; font-size: 1.15rem; }
+.person-title { margin: 4px 0 14px; color: var(--green-dark); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.person-bio { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.6; }
 
 .contact-section { padding: 92px 0; color: white; background: var(--navy); }
 .contact-inner { display: grid; grid-template-columns: 1.3fr .7fr; gap: 100px; align-items: center; }
@@ -91,7 +100,10 @@ h3 { font-size: 1.5rem; }
 .contact-action p { margin-top: 0; color: #d7ddee; }
 .button-light { color: var(--navy); background: white; }
 .button-light:hover, .button-light:focus-visible { color: white; background: var(--green-dark); }
-.contact-action small { display: block; margin-top: 13px; color: #aeb8d0; font-size: .72rem; }
+.contact-details { margin-top: 20px; color: #d7ddee; font-size: .85rem; line-height: 1.7; }
+.contact-details p { margin: 0; }
+.contact-details a { color: white; }
+.contact-details a:hover, .contact-details a:focus-visible { color: #a8d8a5; }
 .site-footer { padding: 34px 0; border-top: 1px solid var(--line); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; color: var(--muted); font-size: .8rem; }
 .footer-inner img { width: 170px; }
@@ -108,12 +120,13 @@ h3 { font-size: 1.5rem; }
   .primary-nav a { padding: 10px 0; }
   .primary-nav .nav-cta { margin-top: 6px; text-align: center; }
   .hero { padding: 84px 0; }
-  .hero-grid, .split-layout, .section-heading, .leadership-card, .contact-inner { grid-template-columns: 1fr; }
+  .hero-grid, .split-layout, .section-heading, .contact-inner { grid-template-columns: 1fr; }
   .hero-grid { gap: 54px; }
   .hero-panel { max-width: 560px; }
   .split-layout, .section-heading { gap: 34px; }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
-  .leadership-card { gap: 34px; padding: 48px; }
+  .service-grid .service-card:last-child { grid-column: span 2; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 40px; padding: 44px 0; }
   .contact-inner { gap: 38px; }
 }
 
@@ -132,9 +145,11 @@ h3 { font-size: 1.5rem; }
   .hero-panel p { font-size: 1.5rem; }
   .section { padding: 76px 0; }
   .service-grid { grid-template-columns: 1fr; }
+  .service-grid .service-card:last-child { grid-column: auto; }
   .service-card { min-height: auto; padding: 28px; }
   .service-number { margin-bottom: 25px; }
-  .leadership-card { padding: 34px 28px; }
+  .stats-grid { grid-template-columns: 1fr; gap: 24px; padding: 40px 0; }
+  .people-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
   .contact-section { padding: 72px 0; }
   .button-light { width: 100%; }
   .footer-inner { align-items: flex-start; flex-direction: column; gap: 16px; }
