@@ -21,7 +21,7 @@ Double-click `index.html`. It will open in your web browser.
 
 GitHub will show the public address after a minute or two. It will usually look like:
 
-`https://YOUR-GITHUB-NAME.github.io/bank-resources-prototype/`
+`https://bjr-ai.github.io/bank-resources-prototype/`
 
 ## Before a real launch
 
